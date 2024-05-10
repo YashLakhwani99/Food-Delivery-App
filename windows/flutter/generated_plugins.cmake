@@ -3,6 +3,10 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  cloud_firestore
+  fc_native_image_resize
+  firebase_auth
+  firebase_core
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

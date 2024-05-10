@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "764916743855",
+    "project_id": "foodiezzzz",
+    "storage_bucket": "foodiezzzz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764916743855:android:a4692f211a3ee934df1e5a",
+        "android_client_info": {
+          "package_name": "com.example.food_delivery_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZmQhDyNgDzilhPijuAR4l32PFPSykgGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

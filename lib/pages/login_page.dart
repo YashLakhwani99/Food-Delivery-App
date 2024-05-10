@@ -1,7 +1,10 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers, use_build_context_synchronously
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:food_delivery_app/components/my_button.dart';
 import 'package:food_delivery_app/components/my_textfield.dart';
+import 'package:food_delivery_app/services/auth/auth_service.dart';
+import 'package:food_delivery_app/services/auth/utils.dart';
 
 class LoginPage extends StatefulWidget {
   final void Function()? onTap;
@@ -17,6 +20,17 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
 
   final TextEditingController passwordController = TextEditingController();
+
+  // login method
+  void login() async {
+    final _authService = AuthService();
+    try {
+      await _authService.signInWithEmailPassword(
+          emailController.text, passwordController.text);
+    } catch (e) {
+      showSnackBar(e.toString(), context);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +86,10 @@ class _LoginPageState extends State<LoginPage> {
             ),
 
             // sign in button
-            MyButton(onTap: () {}, text: "Sign In"),
+            MyButton(
+              onTap: login,
+              text: "Sign In",
+            ),
 
             const SizedBox(
               height: 25,
